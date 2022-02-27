@@ -1,14 +1,14 @@
 import speech_recognition as sr
 from bot_responses import Bot
 
-bot = Bot('jawris', 'Wojtek', 'en')
+bot = Bot('javris', 'Wojtek', 'en')
 
 recognizer = sr.Recognizer()
 with sr.Microphone() as source:
     audio = recognizer.listen(source)
     text = recognizer.recognize_google(audio, language=bot.language)
     if text.lower() == bot.name:
-        print(bot.say_hello())
+        bot.say_hello()
 
 try:
     print(recognizer.recognize_google(audio, language='pl'))
