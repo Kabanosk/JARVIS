@@ -1,5 +1,5 @@
 import speech_recognition as sr
-from bot_responses import Bot
+from bot import Bot
 
 bot = Bot('javris', 'Wojtek', 'en')
 
