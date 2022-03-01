@@ -1,4 +1,5 @@
 import webbrowser as web
+from bs4 import BeautifulSoup
 
 STARTING_URL = 'https://www.google.com/search?q='
 
@@ -8,4 +9,3 @@ def get_first_website(phrase):
     search_url = STARTING_URL + phrase_url
     web.open_new_tab(search_url)
 
-get_first_website('newer gonna give you up')
